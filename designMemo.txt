@@ -1,0 +1,11 @@
+Why is a graph the right structure to represent a social network?
+
+Social networks need a way to store multiple connections to nodes. A graph allows us to give each node as many connections as needed, with no hierarchy. Using a graph also allows connections to be bidirectional, which models how friendships work on social networks. 
+
+Why wouldn’t a list or tree work as well for this?
+
+While a tree allows multiple connections, they are hierarchical. There is no hierarchy in a social network, so a tree does not model the peer-to-peer relationships of a social network very well. On the other hand, lists do not work well for a social network because they are linear. People in the social network would only be able to have two friends at most, since nodes in a list can only have a previous and a next node. 
+
+What performance or structural trade-offs did you notice when adding friends or printing the network?
+
+Since this social network was implemented using an adjacency list, the biggest tradeoff was the speed of tasks that checked the friendship lists. Since adding people and friendships to the network required checking if they were already present, the program had to traverse each list every time these actions were performed, slowing down the runtime execution. In a real social network, this tradeoff could be acceptable since not everyone on the network will be friends with each other.
